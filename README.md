@@ -10,28 +10,20 @@ subtitle: Schuljahr 2023/24
 
 
 ## Vererbung
-
-Erkläre das OOP Konzept der **Vererbung** anhand eines Beispiels.
-
+[Ausarbeitung](thema1/vererbung.md)
 
 
 ## Polymorphismus
-
-Erkläre das OOP Konzept des **Polymorphismus** anhand eines Beispiels.
+[Ausarbeitung](thema1/polymorph.md)
 
 
 
 ## Delegates
-
-Erkläre **C# Delegates** anhand eines Beispiels. 
-
-Wie können Delegates eingesetzt werden um eine wiederverwendbare Methode zum sortieren eines Arrays zu implementieren?
-
+[Ausarbeitung](thema1/delegates.md)
 
 
 ## Design Pattern
-
-Erkläre das **Decorator Pattern** anhand eines Beispiels.
+[Ausarbeitung](thema1/design-pattern.md)
 
 
 
