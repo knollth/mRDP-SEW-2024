@@ -9,10 +9,10 @@ subtitle: Schuljahr 2023/24
 
 
 
--[Ausarbeitung Vererbung](thema1/vererbung.md)
--[Ausarbeitung Polymorphismus](thema1/polymorph.md)
--[Ausarbeitung Delegates](thema1/delegates.md)
--[Ausarbeitung Design Patterns](thema1/design-pattern.md)
+- [Ausarbeitung Vererbung](thema1/vererbung.md)
+- [Ausarbeitung Polymorphismus](thema1/polymorph.md)
+- [Ausarbeitung Delegates](thema1/delegates.md)
+- [Ausarbeitung Design Patterns](thema1/design-pattern.md)
 
 
 
