@@ -54,26 +54,22 @@ subtitle: Schuljahr 2023/24
 
 
 ## Mergesort
-
-Erkläre Funktionsweise und Performance Eigenschaften des Sortierverfahrens **Mergesort**.
+[Ausarbeitung](thema3/mergesort.md)
 
 
 
 ## Quicksort
-
-Erkläre Funktionsweise und Performance Eigenschaften des Sortierverfahrens **Quicksort**.
+[Ausarbeitung](thema3/quicksort.md)
 
 
 
 ## Verkettete Liste
-
-Erkläre das Funktionsprinzip einer einfach verketteten Liste. Wie werden grundlegende Operationen (Suchen, Einfügen und Löschen) implementiert? Was sind die Performance Eigenschaften?
+[Ausarbeitung](thema3/linked-list.md)
 
 
 
 ## Dijkstra Shortest Path
-
-Erkläre den Anwendungsfall und die Funktionsweise des Dijkstra Shortest Path Algorithmus. Verwende ein Beispiel.
+[Ausarbeitung](thema3/dijkstra-spf.md)
 
 
 
