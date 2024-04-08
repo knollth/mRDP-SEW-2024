@@ -10,42 +10,42 @@ subtitle: Schuljahr 2023/24
 
 
 ## Vererbung
-[Ausarbeitung](thema1/vererbung.md)
+[Ausarbeitung Vererbung](thema1/vererbung.md)
 
 
 ## Polymorphismus
-[Ausarbeitung](thema1/polymorph.md)
+[Ausarbeitung Polymorphismus](thema1/polymorph.md)
 
 
 
 ## Delegates
-[Ausarbeitung](thema1/delegates.md)
+[Ausarbeitung Delegates](thema1/delegates.md)
 
 
 ## Design Pattern
-[Ausarbeitung](thema1/design-pattern.md)
+[Ausarbeitung Design Patterns](thema1/design-pattern.md)
 
 
 
 # Suchen und Sortieren
 
 ## Binäre Suche
-[Ausarbeitung](thema2/binary-search.md)
+[Ausarbeitung Binäre Suche](thema2/binary-search.md)
 
 
 
 ## Binärbaum
-[Ausarbeitung](thema2/binary-tree.md)
+[Ausarbeitung Binärbäume](thema2/binary-tree.md)
 
 
 
 ## Hashing
-[Ausarbeitung](thema2/hashing.md)
+[Ausarbeitung Hashing](thema2/hashing.md)
 
 
 
 ## Klassische Sortierverfahren
-[Ausarbeitung](thema2/klassische-sortierverfahren.md)
+[Ausarbeitung Klassische Sortierverfahren](thema2/klassische-sortierverfahren.md)
 
 
 
@@ -54,22 +54,22 @@ subtitle: Schuljahr 2023/24
 
 
 ## Mergesort
-[Ausarbeitung](thema3/mergesort.md)
+[Ausarbeitung Mergesort](thema3/mergesort.md)
 
 
 
 ## Quicksort
-[Ausarbeitung](thema3/quicksort.md)
+[Ausarbeitung Quicksort](thema3/quicksort.md)
 
 
 
 ## Verkettete Liste
-[Ausarbeitung](thema3/linked-list.md)
+[Ausarbeitung Verkettete Liste](thema3/linked-list.md)
 
 
 
 ## Dijkstra Shortest Path
-[Ausarbeitung](thema3/dijkstra-spf.md)
+[Ausarbeitung Dijkstra Shortest Path](thema3/dijkstra-spf.md)
 
 
 
@@ -79,7 +79,7 @@ subtitle: Schuljahr 2023/24
 
 ## Dijkstra Shunting-yard Algorithmus
 
-[Ausarbeitung](thema4/dijkstra-shunting-yard.md)
+[Ausarbeitung Dijkstra Shunting-yard Algorth](thema4/dijkstra-shunting-yard.md)
 
 ## Rekursion allgemein
 [Ausarbeitung](thema4/rekursion-allgemein.md)
@@ -95,13 +95,13 @@ subtitle: Schuljahr 2023/24
 
 ## C# Collections
 
-[Ausarbeitung](thema5/csharp-collections.md)
+[Ausarbeitung C# Collections](thema5/csharp-collections.md)
 
 ## Dynamisches Array
-[Ausarbeitung](thema5/dynarray.md)
+[Ausarbeitung Dynamisches Array](thema5/dynarray.md)
 
 ## CSV Daten in Objekte einlesen (Bearbeiten, Sortieren)
-[Ausarbeitung](thema5/csv-parsing.md)
+[Ausarbeitung CSV Parsing](thema5/csv-parsing.md)
 ## JSON
 
-[Ausarbeitung](thema5/json.md)
+[Ausarbeitung JSON](thema5/json.md)
