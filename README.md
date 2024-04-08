@@ -29,29 +29,23 @@ subtitle: Schuljahr 2023/24
 
 # Suchen und Sortieren
 
-
-
 ## Binäre Suche
-
-Erkläre den Algorithmus der binären Suche. Verwende ein Beispiel. Betrachte die Performance Eigenschaften.
+[Ausarbeitung](thema2/binary-search.md)
 
 
 
 ## Binärbaum
-
-Erkläre wie ein binärer Suchbaum funktioniert. Was sind die Performance Eigenschaften? Wie werden grundlegende Operationen (Suchen, Einfügen und Löschen) implementiert.
+[Ausarbeitung](thema2/binary-tree.md)
 
 
 
 ## Hashing
-
-Erkläre wie Hashing als Suchverfahren in einer Datenstruktur eingesetzt werden kann. Was sind die Performance Eigenschaften? Wie werden grundlegende Operationen (Suchen, Einfügen und Löschen) implementiert?
+[Ausarbeitung](thema2/hashing.md)
 
 
 
 ## Klassische Sortierverfahren
-
-Erkläre Funktionsweise und Performance Eigenschaften der drei klassischen Sortierverfahren. Verwende Beispiele. Implementiere eines davon.
+[Ausarbeitung](thema2/klassische-sortierverfahren.md)
 
 
 
