@@ -6,9 +6,6 @@ subtitle: Schuljahr 2023/24
 
 
 # Programmierparadigmen
-
-
-
 - [Ausarbeitung Vererbung](thema1/vererbung.md)
 - [Ausarbeitung Polymorphismus](thema1/polymorph.md)
 - [Ausarbeitung Delegates](thema1/delegates.md)
@@ -18,79 +15,25 @@ subtitle: Schuljahr 2023/24
 
 # Suchen und Sortieren
 
-## Binäre Suche
-[Ausarbeitung Binäre Suche](thema2/binary-search.md)
-
-
-
-## Binärbaum
-[Ausarbeitung Binärbäume](thema2/binary-tree.md)
-
-
-
-## Hashing
-[Ausarbeitung Hashing](thema2/hashing.md)
-
-
-
-## Klassische Sortierverfahren
-[Ausarbeitung Klassische Sortierverfahren](thema2/klassische-sortierverfahren.md)
-
-
+- [Ausarbeitung Binäre Suche](thema2/binary-search.md)
+- [Ausarbeitung Binärbäume](thema2/binary-tree.md)
+- [Ausarbeitung Hashing](thema2/hashing.md)
+- [Ausarbeitung Klassische Sortierverfahren](thema2/klassische-sortierverfahren.md)
 
 # Algorithmen und Datenstrukturen
-
-
-
-## Mergesort
-[Ausarbeitung Mergesort](thema3/mergesort.md)
-
-
-
-## Quicksort
-[Ausarbeitung Quicksort](thema3/quicksort.md)
-
-
-
-## Verkettete Liste
-[Ausarbeitung Verkettete Liste](thema3/linked-list.md)
-
-
-
-## Dijkstra Shortest Path
-[Ausarbeitung Dijkstra Shortest Path](thema3/dijkstra-spf.md)
-
-
+- [Ausarbeitung Mergesort](thema3/mergesort.md)
+- [Ausarbeitung Quicksort](thema3/quicksort.md)
+- [Ausarbeitung Verkettete Liste](thema3/linked-list.md)
+- [Ausarbeitung Dijkstra Shortest Path](thema3/dijkstra-spf.md)
 
 # Ausgewählte Themen der Software-Entwicklung
-
-
-
-## Dijkstra Shunting-yard Algorithmus
-
-[Ausarbeitung Dijkstra Shunting-yard Algorth](thema4/dijkstra-shunting-yard.md)
-
-## Rekursion allgemein
-[Ausarbeitung](thema4/rekursion-allgemein.md)
-
-## Bäume und Rekursion
-[Ausarbeitung](thema4/trees-und-rekursion.md)
-
-
-## Anzahl unterschiedlicher Wörter
-[Ausarbeitung](thema4/wordcount.md)
+- [Ausarbeitung Dijkstra Shunting-yard Algorth](thema4/dijkstra-shunting-yard.md)
+- [Ausarbeitung Rekursion allgemein](thema4/rekursion-allgemein.md)
+- [Ausarbeitung Bäume und Rekursion](thema4/trees-und-rekursion.md)
+- [Ausarbeitung Anzahl unterschiedlicher Wörter](thema4/wordcount.md)
 
 # Software Systeme
-
-## C# Collections
-
-[Ausarbeitung C# Collections](thema5/csharp-collections.md)
-
-## Dynamisches Array
-[Ausarbeitung Dynamisches Array](thema5/dynarray.md)
-
-## CSV Daten in Objekte einlesen (Bearbeiten, Sortieren)
-[Ausarbeitung CSV Parsing](thema5/csv-parsing.md)
-## JSON
-
-[Ausarbeitung JSON](thema5/json.md)
+- [Ausarbeitung C# Collections](thema5/csharp-collections.md)
+- [Ausarbeitung Dynamisches Array](thema5/dynarray.md)
+- [Ausarbeitung CSV Parsing (Bearbeiten, Sortieren)](thema5/csv-parsing.md)
+- [Ausarbeitung JSON](thema5/json.md)
