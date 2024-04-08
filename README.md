@@ -79,7 +79,7 @@ subtitle: Schuljahr 2023/24
 
 ## Dijkstra Shunting-yard Algorithmus
 
-Ein arithmetischer Ausdruck liegt als paarweise geklammerter Ausdruck in einem String vor. Der Ausdruck enthält die 4 Grundrechenarten und einstellige Zahlen. Beispiel:
+[Ausarbeitung](thema3/dijkstra-shunting-yard.md)
 
 ```
 ((1+2)*(7-(2*3)))
