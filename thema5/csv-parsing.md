@@ -126,17 +126,99 @@ class Program
 
 ---
 
-&nbsp;
+
 ### Älteste Person in der Liste finden
 
 Vorgehensweise: Um die älteste Person aus der Liste zu finden, müssen die Geburtsdaten verglichen werden. Dazu wird am Anfang die erste Person in der Liste als älteste Person festgelegt. Das Geburtsdatum der Person wird mit den Geburtsdaten aller anderen Personen verglichen.
 Wenn das Geburtsdatum der aktuellen Person älter ist als das der bisher ältesten Person, wird die Referenz auf die älteste Person geändert. 
 
+&nbsp;
 **3 verschieden Fallmöglichkeiten:**
-1. Personen sind in unterschiedlichen Jahren geboren
+Vorraussetzung: Es gibt nur **eine** Person, die die Älteste ist. 
 
-2. Personen sind im gleichen Jahr, aber in verschiedenen Monaten geboren
+| Jahr ≠ Jahr | Jahr = Jahr<br> Monat ≠ Monat | Jahr = Jahr<br>Monat = Monat<br>Tag ≠ Tag |
+|----------|----------|----------|
+| ![Ausgabe im Terminal](./img/Fall1.png)   | ![Ausgabe im Terminal](./img/Fall2.png)   | ![Ausgabe im Terminal](./img/Fall3.png)   |
 
-3. Personen sind im gleichen Jahr und Monat geboren, aber an unterschiedlichen Tagen
+&nbsp;
+**Implementierung: Finden der ältesten Person in der Liste:**
+
+```cs
+class Program
+{
+    public static void Main(string[] args)
+    {
+        List<Person> listOfPeople = readCSV("test.csv");
+
+        foreach (Person p in readCSV("test.csv"))
+        {
+            Console.WriteLine(p.firstname + " " + p.lastname + " " + p.birth.day + "." + p.birth.month + "." + p.birth.year);
+        }
+
+        Person oldestPerson = findOldestPerson(listOfPeople);
+        Console.WriteLine("Oldest Person: " + oldestPerson.firstname + " " + oldestPerson.lastname);
+
+    }
 
 
+    public static List<Person> readCSV(string filePath)
+    {
+        //siehe oben
+    }
+
+
+    public static Person findOldestPerson(List<Person> list)
+    {
+        Person oldest = list[0];
+        foreach (Person p in list)
+        {
+            if (oldest != isOlder(oldest, p))
+            {
+                oldest = p;
+            }
+        }
+        return oldest;
+    }
+
+    public static Person isOlder(Person oldest, Person p)
+    {
+        //Fall 1:
+        if (oldest.birth.year != p.birth.year)
+        {
+            if (oldest.birth.year < p.birth.year)
+            {
+                return oldest;
+            }
+            else
+            {
+                return p;
+            }
+        }//Fall 2:
+        else if (oldest.birth.month != p.birth.month)
+        {
+            if (oldest.birth.month < p.birth.month)
+            {
+                return oldest;
+            }
+            else
+            {
+                return p;
+            }
+        } // Fall 3:
+        else if (oldest.birth.day < p.birth.day)
+        {
+            return oldest;
+        }
+        else{ 
+	    return p; 
+	}
+    }
+}
+
+
+```
+
+&nbsp;
+**Ausgabe im Terminal:**
+
+![Ausgabe im Terminal](./img/Ausgabe_oldest.png)
