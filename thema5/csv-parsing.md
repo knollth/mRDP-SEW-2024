@@ -125,7 +125,7 @@ class Program
 ![Ausgabe im Terminal](./img/CSV_ausgeben.png)
 
 ---
-<<<<<<< HEAD
+
 
 
 ### Älteste Person in der Liste finden
