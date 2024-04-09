@@ -27,7 +27,7 @@ Hierbei gibt es zwei Knoten welche Sonderfälle sind:
 
 
 
-### Implementierung
+## Implementierung
 
 Wenn man eine einfach verkettete Datenstruktur in einer OOP basierten Sprache wie Java oder C# zum implementieren will fängt man als erstes mit dem Knoten an
 ```java
