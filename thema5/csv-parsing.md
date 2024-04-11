@@ -95,23 +95,23 @@ class Program
     		string line;
     		while ((line = reader.ReadLine()) != null)
     		{
-    			if(ignoreFirstLine){
-    			    ignoreFirstLine = false;
-    			    continue;
-    			}else{
-                            string[] row = line.Split(';');
-                            string first = row[0];
-                            string last = row[1];
-                            string birth = row[2];
-                
-                            String[] birthSplit = birth.Split('.');
-                            int day = int.Parse(birthSplit[0]);
-                            int month = int.Parse(birthSplit[1]);
-                            int year = int.Parse(birthSplit[2]);
-                            Person p = new Person(first, last, day, month, year);
-                            people.Add(p);
-    		        }
-    	        }
+    		    if(ignoreFirstLine){
+    			ignoreFirstLine = false;
+    			continue;
+                    }          
+                         
+                    string[] row = line.Split(';');
+                    string first = row[0];
+                    string last = row[1];
+                    string birth = row[2];
+                    
+                    String[] birthSplit = birth.Split('.');
+                    int day = int.Parse(birthSplit[0]);
+                    int month = int.Parse(birthSplit[1]);
+                    int year = int.Parse(birthSplit[2]);
+                    Person p = new Person(first, last, day, month, year);
+                    people.Add(p);
+    	    }
         }
     		
         return people;
