@@ -42,3 +42,11 @@ Über den Google geocode Webservice soll ermittelt werden in welchem Land sich 
    "status" : "OK"
 }
 ```
+---
+## JSON Datenformat
+
+JSON (JavaScript Object Notation) ist ein Datenformat, das hauptsächlich für den Datenaustausch zwischen Anwendungen verwendet wird. Es ist einfach zu lesen und zu schreiben, sowohl für Menschen als auch für Maschinen.
+
+JSON-Daten werden in Schlüssel/Wert-Paaren geschrieben. Schlüssel und Wert werden durch einen Doppelpunkt in der Mitte getrennt, wobei sich der Schlüssel links und der Wert rechts befindet. Unterschiedliche Schlüssel/Wert-Paare werden durch ein Komma (,) getrennt. Arrays werden mit eckigen Klammern ([ ]) dargestellt. Elemente innerhalb von Arrays werden mit einem Komma getrennt.
+
+## Implementierung
