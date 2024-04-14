@@ -27,7 +27,7 @@ public static int IterativeBinarySearch(int[] arr, int target)
 
         while (left <= right)
         {
-            int mid = left + (right - left) / 2;
+            int mid = (left + right) / 2;
 
             // Wenn das Element in der Mitte das Ziel ist, geben Sie den Index zurück
             if (arr[mid] == target)
@@ -58,7 +58,7 @@ public static int RecursiveBinarySearch(int[] arr, int target, int left, int rig
     {
         if (left <= right)
         {
-            int mid = left + (right - left) / 2;
+            int mid = (left + right) / 2;
 
             // Wenn das Element in der Mitte das Ziel ist, geben Sie den Index zurück
             if (arr[mid] == target)
@@ -83,7 +83,7 @@ public static int RecursiveBinarySearch(int[] arr, int target, int left, int rig
 ```
 
 ### Code Anmerkung
-Generell such man immer mit ```int mid = left + (right - left) / 2;``` die Mitte. Diese wird mit dem gesuchten Wert verglichen. Daraus folgen 3 Fälle:
+Generell such man immer mit ```int mid = (left + right) / 2;``` die Mitte. Diese wird mit dem gesuchten Wert verglichen. Daraus folgen 3 Fälle:
 
 - Die Mitte des Arrays ist die gesuchte Zahl oder Element -> fertig
 - Die Zahl in der Mitte ist größer, dann muss man sich den linken Teil also "left bis mid-1" weiter anschauen
