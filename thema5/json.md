@@ -37,7 +37,7 @@ Über den Google geocode Webservice soll ermittelt werden in welchem Land sich 
                "lng" : -63.379967
             },
          }
-      },
+      }
    ],
    "status" : "OK"
 }
@@ -117,9 +117,6 @@ class Program
       }
 
       Console.WriteLine("Country: "+country+"\nCity:"+city);
-      Console.WriteLine("----------------");
-
-      Console.WriteLine("Lazy way:\nCountry:"+splittedAddress[2]+"\nCity: "+ splittedAddress[0]);
    }
 }
 
