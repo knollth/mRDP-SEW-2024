@@ -50,3 +50,119 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das hauptsächlich für d
 JSON-Daten werden in Schlüssel/Wert-Paaren geschrieben. Schlüssel und Wert werden durch einen Doppelpunkt in der Mitte getrennt, wobei sich der Schlüssel links und der Wert rechts befindet. Unterschiedliche Schlüssel/Wert-Paare werden durch ein Komma (,) getrennt. Arrays werden mit eckigen Klammern ([ ]) dargestellt. Elemente innerhalb von Arrays werden mit einem Komma getrennt.
 
 ## Implementierung
+
+**Visualiserung:**
+
+![Aufbau des vorgegebenen JSON Files](./img/json.png)
+&nbsp;
+
+**Code:**
+
+```cs
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Text.Json;
+
+/* note: 
+Für diese Aufgabe wurden nur die benötigten Klassen implementiert; 
+Unten befindet sich die vollständige Umsetzung,
+um auf alle Informationen zugreifen zu können
+*/
+
+public class AddressComponent
+{
+   public string long_name { get; set; }
+   public string short_name { get; set; }
+   public List<string> types { get; set; }
+}
+
+
+public class Result
+{
+   public List<AddressComponent> address_components { get; set; }
+}
+
+
+public class Response
+{
+   public List<Result> results { get; set; }
+}
+
+class Program
+{
+   public static void Main(string[] args)
+   {
+      string dataJson = File.ReadAllText("geolocation.json");
+
+      Response response = JsonSerializer.Deserialize<Response>(dataJson);
+
+      string country = "";
+      string city = "";
+      
+      foreach(Result result in response.results)
+      {
+         foreach(AddressComponent addressComponent in result.address_components)
+         {
+            if(addressComponent.types.Contains("locality"))
+            {
+                  city = addressComponent.long_name;
+            }
+
+            if(addressComponent.types.Contains("country"))
+            {
+                  country = addressComponent.long_name;
+            }
+         }
+      }
+
+      Console.WriteLine("Country: "+country+"\nCity:"+city);
+      Console.WriteLine("----------------");
+
+      Console.WriteLine("Lazy way:\nCountry:"+splittedAddress[2]+"\nCity: "+ splittedAddress[0]);
+   }
+}
+
+```
+---
+
+**Vollständige Implementierung aller Klassen:**
+
+```cs
+public class AddressComponent
+{
+   public string long_name { get; set; }
+   public string short_name { get; set; }
+   public List<string> types { get; set; }
+}
+
+
+public class Location
+{
+   public double lat { get; set; }
+   public double lng { get; set; }
+}
+
+
+public class Geometry
+{
+   public Location location { get; set; }
+}
+
+
+public class Result
+{
+   public List<AddressComponent> address_components { get; set; }
+   public string formatted_address { get; set; }
+   public Geometry geometry { get; set; }
+}
+
+
+public class Response
+{
+   public List<Result> results { get; set; }
+   public string status { get; set; }
+}
+
+//...
+```
