@@ -27,7 +27,7 @@ subtitle: Schuljahr 2023/24
 - [Dijkstra Shortest Path](thema3/dijkstra-spf.md)
 
 # Ausgewählte Themen der Software-Entwicklung
-- [Dijkstra Shunting-yard Algorth](thema4/dijkstra-shunting-yard.md)
+- [Dijkstra Shunting-yard Algorithmus](thema4/dijkstra-shunting-yard.md)
 - [Rekursion allgemein](thema4/rekursion-allgemein.md)
 - [Bäume und Rekursion](thema4/trees-und-rekursion.md)
 - [Anzahl unterschiedlicher Wörter](thema4/wordcount.md)

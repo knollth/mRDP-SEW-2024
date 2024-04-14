@@ -65,3 +65,20 @@ return 3 + sum_rec(2)
 - Backtracking algoritmen
 - Divide and Conquer algoritmen ( z.B Merge-Sort)
 
+
+## Extra Info
+###  Bewertung der Laufzeit und des Speicherverbrauchs
+
+Beide Methoden haben eine Laufzeit von O(n), jedoch unterscheiden sie sich im Speicherverbrauch deutlich. Rekursive Methoden benötigen Speicher für jeden Funktionsaufruf im Stack, was bei tiefen Rekursionen problematisch sein kann. Iterative Methoden hingegen haben einen konstanten Speicherverbrauch, da keine zusätzlichen Aufrufstacks benötigt werden.
+
+### Vor- und Nachteile von Rekursion
+
+Rekursionen sind mächtig, wenn es um die Lösung von Problemen geht, die natürlich in kleinere Teilprobleme zerlegt werden können. Allerdings sind sie oft weniger speichereffizient und können langsamer sein als iterative Lösungen. Für Probleme mit begrenzter Eingabegröße oder wenn die Klarheit des Codes priorisiert wird, ist Rekursion jedoch eine hervorragende Wahl.
+
+**Anwendungsbeispiele für Rekursion:**
+
+- In der Informatik sind rekursive Algorithmen unerlässlich für die Traversierung und das Durchsuchen von Baumen und Graphen, wie es bei Suchalgorithmen der Fall ist.
+- In der Computergrafik wird Rekursion für Fraktale und rekursive Zeichnungen verwendet, da sich Muster und Formen auf natürliche Weise rekursiv definieren lassen.
+
+Diese Konzepte sind fundamental, um sowohl die praktische Anwendung von mathematischen Modellen und Algorithmen als auch die theoretischen Grundlagen der Informatik zu verstehen.
+
