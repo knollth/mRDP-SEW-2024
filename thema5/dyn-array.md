@@ -43,6 +43,15 @@ Wenn ein Element gelöscht werden soll, werden nacheinander die Elemente eine St
 
 ---
 
+
+**Größenanpassung (resize):**
+
+Wenn das Array nur zu einem Viertel oder weniger gefüllt ist, wird zur Speicheroptimierung das Array verkleinert. Dazu wird das Array in ein neues, kleineres Array kopiert und schrumpft so z.B auf die halbe Größe.
+
+![Größenanpassung, wenn das Array >= 1/4 gefüllt ist](./img/resize.png)
+
+---
+
 ## Performancevergleich
 
 **Lesen:**
@@ -100,14 +109,14 @@ class DynArray
     public int[] array;
     public int size; // Anzahl der Elemente im Array --> i
 
+
     public DynArray()
     {
         array = new int[5];
         size = 0;
     }
 
-
-    // --- Einfügen am Ende ---
+    // Einfügen am Ende
     public void add(int n)
     {
 	// Array voll?
@@ -115,18 +124,20 @@ class DynArray
         {
             resizeArray();
         }
-        array[size++] = n;
+        array[size] = n;
+	size++;
     }
 	
-
-    // --- Einfügen an Index i ---
+    // Einfügen am Index i
     public void add(int i, int n)
     {
-        if (i < 0 || i > size){
+        if (i < 0 || i > size)
+        {
             Console.WriteLine("Index is not valid!");
         }
 
-        if (size == array.Length){
+        if (size == array.Length)
+        {
             resizeArray();
         }
 	
@@ -135,7 +146,8 @@ class DynArray
 	size++;
     }
 
-    // --- Entfernen an Index i ---
+
+    // Methode zum Entfernen eines Elements an einem bestimmten Index
     public void remove(int i)
     {
         if (i < 0 || i >= size)
@@ -143,18 +155,33 @@ class DynArray
 	    Console.WriteLine("Index is not valid!");
         }
 
+	// Array um 1 nach links verschieben, letzte Stelle auf 0 setzen
 	Array.Copy(array, i + 1, array, i, size - i - 1);
 	array[size - 1]=0;
 	size--;
 
-	if (size < array.Length / 4){
-	    resizeArray();
+	// Prüfen, ob Array weniger als 1/4 voll ist
+	if (size < array.Length / 4)
+	{
+	    shrinkArray();
 	}
     }
 
+
+    // Array vergrößern
     public void resizeArray()
     {
-	int newSize = array.Length * 2; // Array Größe wird verdoppelt
+	int newSize = array.Length * 2; 
+	int[] newArray = new int[newSize];
+	Array.Copy(array, newArray, size);
+	array = newArray;
+    }
+
+    // Array verkleinern
+    public void shrinkArray()
+    {
+        Console.WriteLine("SHRINK");
+	int newSize = array.Length /2; 
 	int[] newArray = new int[newSize];
 	Array.Copy(array, newArray, size);
 	array = newArray;
@@ -168,25 +195,25 @@ class Program
     {
         DynArray dynArr = new DynArray();
 
-        dynArr.add(1);
-        dynArr.add(2);
-        dynArr.add(3);
+        dynArr.add(0,1);
+	dynArr.add(1,2);
+	dynArr.add(3);
 	dynArr.add(4);
-	Console.WriteLine(String.Join(", ", dynArr.array));
-
 	dynArr.add(5);
+	Console.WriteLine(String.Join(", ", dynArr.array));
 	dynArr.add(6);
 	Console.WriteLine(String.Join(", ", dynArr.array));
-      
-        dynArr.add(0, 0); 
-        dynArr.add(4, 5); 
-        Console.WriteLine(String.Join(", ", dynArr.array));
 
-        dynArr.remove(2); 
-        Console.WriteLine(String.Join(", ", dynArr.array));
+	dynArr.remove(5);
+	Console.WriteLine(String.Join(", ", dynArr.array));
+	dynArr.remove(4);
+	dynArr.remove(3);
+	dynArr.remove(2);
+	Console.WriteLine(String.Join(", ", dynArr.array));
+	dynArr.remove(1);
+	Console.WriteLine(String.Join(", ", dynArr.array));				
     }
 }
-
 
 
 ```
