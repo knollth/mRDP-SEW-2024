@@ -40,12 +40,13 @@ def sum_iterativ(n)
 recursive
 sum_rec(3)
 
-
+```
 return 3 + sum_rec(2)
 		2 + sum_rec(1)
 			1 + sum_rec(0)
 				0
 	6
+```
 
 - **Laufzeit**:
     - Rekursive Implementierung: Die Laufzeit der rekursiven Implementierung ist O(n) da für jedes n eine neue Funktion aufgerufen werden muss
