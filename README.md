@@ -34,6 +34,6 @@ subtitle: Schuljahr 2023/24
 
 # Software Systeme
 - [C# Collections](thema5/csharp-collections.md)
-- [Dynamisches Array](thema5/dynarray.md)
+- [Dynamisches Array](thema5/dyn-array.md)
 - [CSV Parsing (Bearbeiten, Sortieren)](thema5/csv-parsing.md)
 - [JSON](thema5/json.md)
