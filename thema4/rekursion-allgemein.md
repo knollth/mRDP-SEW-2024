@@ -18,7 +18,7 @@ Das ganze wird Dreieckszahl gennant da die punkte jeder zahl ein Dreieck ergenbe
 ```
 
 
-Recursive
+Recursiv
 
 ```python
 def sum_rec(n)
@@ -27,14 +27,14 @@ def sum_rec(n)
  else:
   return n+sum_rec(n-1)
 ```
-Iterative
+Iterativ
 ```python
 def sum_iterativ(n)
-int ret = 0;
-while n > 0:
-	ret += n
-	n--
-return ret;
+	int ret = 0;
+	while n > 0:
+		ret += n
+		n--
+	return ret;
 ```
 
 recursive
