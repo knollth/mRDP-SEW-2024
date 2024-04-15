@@ -82,3 +82,8 @@ Rekursionen sind mächtig, wenn es um die Lösung von Problemen geht, die natür
 
 Diese Konzepte sind fundamental, um sowohl die praktische Anwendung von mathematischen Modellen und Algorithmen als auch die theoretischen Grundlagen der Informatik zu verstehen.
 
+### Fragen Matejka
+Was ist der Stack?
+Was wird in diesem Zusammenhang im Stack gespeichtert?
+Warum kann es zum Stack Overflow kommen?
+Kann man mit einem Alg rekursiv in iterativ umwandeln?

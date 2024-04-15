@@ -81,7 +81,7 @@ namespace Decorator{
     }
   }
 
-  class OlivenDecoratore : PizzaDecorator{
+  class OlivenDecorator : PizzaDecorator{
     public OlivenDecoratore(IPizza pizza) : base(pizza){}
 
     public override string Info(){
@@ -92,7 +92,7 @@ namespace Decorator{
     }
   }
 
-  class SardellenDecoratore : PizzaDecorator{
+  class SardellenDecorator : PizzaDecorator{
     public SardellenDecoratore(IPizza pizza) : base(pizza){}
 
     public override string Info(){
@@ -103,7 +103,7 @@ namespace Decorator{
     }
   }
   
-  class ArtischokenDecoratore : PizzaDecorator{
+  class ArtischokenDecorator : PizzaDecorator{
     public ArtischokenDecoratore(IPizza pizza) : base(pizza){}
 
     public override string Info(){
@@ -126,9 +126,9 @@ Diese Decorator können nun belibig und verschachtelt egal ob ausgehend einer Ma
 
 ```c#
 IPizza pizza = new Pizzas.Napoli();
-    Console.WriteLine(new Decorator.OlivenDecoratore(new Decorator.OlivenDecoratore(new Decorator.ArtischokenDecoratore(pizza))).Price());
+    Console.WriteLine(new Decorator.OlivenDecorator(new Decorator.OlivenDecorator(new Decorator.ArtischokenDecoratore(pizza))).Price());
 
-    Console.WriteLine(new Decorator.OlivenDecoratore(new Decorator.OlivenDecoratore(new Decorator.ArtischokenDecoratore(pizza))).Info());
+    Console.WriteLine(new Decorator.OlivenDecorator(new Decorator.OlivenDecorator(new Decorator.ArtischokenDecorator(pizza))).Info());
 ```
 
 ##### Output
@@ -144,3 +144,9 @@ Napoli+Artischoken+Oliven+Oliven
 um das ganze besser zu verstehen hier noch eine Bild zur übersicht:
 
 ![Skizze für Verständnis](./img/PizzaSelfemade.png)
+
+
+### Fragen Matejka:
+Was macht virutal genau?
+Unterschied abstracte Klasse zu Interface?
+Was macht das verschachteln der Decorator möglich?
