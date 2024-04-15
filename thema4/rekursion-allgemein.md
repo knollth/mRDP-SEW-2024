@@ -31,8 +31,9 @@ Iterative
 ```python
 def sum_iterativ(n)
 int ret = 0;
- for n >= 0:
-  ret += n
+while n > 0:
+	ret += n
+	n--
 return ret;
 ```
 
