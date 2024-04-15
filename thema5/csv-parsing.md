@@ -134,17 +134,96 @@ Vorgehensweise: Um die älteste Person aus der Liste zu finden, müssen die Gebu
 Wenn das Geburtsdatum der aktuellen Person älter ist als das der bisher ältesten Person, wird die Referenz auf die älteste Person geändert. 
 
 &nbsp;
-**3 verschieden Fallmöglichkeiten:**
+**4 verschieden Fallmöglichkeiten:**
 Vorraussetzung: Es gibt nur **eine** Person, die die Älteste ist. 
 
-| Jahr ≠ Jahr | Jahr = Jahr<br> Monat ≠ Monat | Jahr = Jahr<br>Monat = Monat<br>Tag ≠ Tag |
-|----------|----------|----------|
-| ![Ausgabe im Terminal](./img/Fall1.png)   | ![Ausgabe im Terminal](./img/Fall2.png)   | ![Ausgabe im Terminal](./img/Fall3.png)   |
+| Jahr ≠ Jahr | Jahr = Jahr<br> Monat ≠ Monat | Jahr = Jahr<br>Monat = Monat<br>Tag ≠ Tag | Jahr = Jahr<br>Monat = Monat<br>Tag = Tag|
+|----------|----------|----------|----------|
+| ![Jahre unterschiedlich](./img/Fall1.png)   | ![Monat unterschiedlich](./img/Fall2.png)   | ![Tage unterschiedlich](./img/Fall3.png)   | ![Alle Attribute gleich](./img/Fall4.png) |
 
 &nbsp;
 **Implementierung: Finden der ältesten Person in der Liste:**
 
 ```cs
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Birthdate
+{
+    public int day;
+    public int month;
+    public int year;
+
+    public Birthdate(int day, int month, int year)
+    {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public Birthdate CompareTo(Birthdate p)
+    {
+        //Fall 1:
+	if (this.year != p.year)
+	{
+	    if (this.year < p.year)
+	    {
+		 return this;
+	    }
+            else
+	    {
+		 return p;
+	    }
+	}//Fall 2:
+	else if (this.month != p.month)
+	{
+	    if (this.month < p.month)
+	    {
+		return this;
+            }
+            else
+	    {
+		 return p;
+	    }
+	} // Fall 3:
+	else if (this.day != p.day)
+	{
+	    if(this.day<p.day)
+            {
+		return this;
+	    }	 
+	    else
+            { 
+		return p; 
+	    }
+	}
+        // Fall 4: Auswahl egal
+	else
+        {
+	    return this;
+	}	 
+    }
+}
+
+
+class Person
+{
+    public string firstname;
+    public string lastname;
+    public Birthdate birth;
+
+    public Person(string firstname, string lastname, int day, int month, int year)
+    {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.birth = new Birthdate(day, month, year);
+    }
+
+}
+
+
+
 class Program
 {
     public static void Main(string[] args)
@@ -157,65 +236,71 @@ class Program
         }
 
         Person oldestPerson = findOldestPerson(listOfPeople);
-        Console.WriteLine("Oldest Person: " + oldestPerson.firstname + " " + oldestPerson.lastname);
+        Console.WriteLine("Oldest Person:" + oldestPerson.firstname + " " + oldestPerson.lastname);
 
     }
 
 
     public static List<Person> readCSV(string filePath)
     {
-        //siehe oben
+        List<Person> people = new List<Person>();
+
+        // first;last;birth ignorieren
+        bool ignoreFirstLine = true;
+
+        using (StreamReader reader = new StreamReader(filePath))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                if (ignoreFirstLine)
+                {
+                    ignoreFirstLine = false;
+                    continue;
+                }
+                
+                    string[] row = line.Split(';');
+
+                    string first = row[0];
+                    string last = row[1];
+                    string birth = row[2];
+
+                    String[] birthSplit = birth.Split('.');
+                    int day = int.Parse(birthSplit[0]);
+                    int month = int.Parse(birthSplit[1]);
+                    int year = int.Parse(birthSplit[2]);
+                    Person p = new Person(first, last, day, month, year);
+                    people.Add(p);
+
+            }
+        }
+
+        return people;
     }
 
 
     public static Person findOldestPerson(List<Person> list)
     {
-        Person oldest = list[0];
-        foreach (Person p in list)
+	Birthdate oldest = list[0].birth;
+	foreach(Person p in list)
         {
-            if (oldest != isOlder(oldest, p))
+	    if(oldest.CompareTo(p.birth) == p.birth)
             {
-                oldest = p;
-            }
-        }
-        return oldest;
-    }
-
-    public static Person isOlder(Person oldest, Person p)
-    {
-        //Fall 1:
-        if (oldest.birth.year != p.birth.year)
-        {
-            if (oldest.birth.year < p.birth.year)
-            {
-                return oldest;
-            }
-            else
-            {
-                return p;
-            }
-        }//Fall 2:
-        else if (oldest.birth.month != p.birth.month)
-        {
-            if (oldest.birth.month < p.birth.month)
-            {
-                return oldest;
-            }
-            else
-            {
-                return p;
-            }
-        } // Fall 3:
-        else if (oldest.birth.day < p.birth.day)
-        {
-            return oldest;
-        }
-        else{ 
-	    return p; 
+		oldest = p.birth;
+	    }
 	}
-    }
-}
+			
+	foreach(Person p in list)
+        {
+	    if(p.birth == oldest)
+            {
+		return p;
+	    }
+	}
 
+	return null;	
+    }    
+}
 
 ```
 
@@ -224,4 +309,3 @@ class Program
 
 ![Ausgabe im Terminal](./img/Ausgabe_oldest.png)
 
-//TODO: Methode in Birth, damit Ausdrücke wie oldest.birth.day nicht nötig ist
