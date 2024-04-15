@@ -224,3 +224,4 @@ class Program
 
 ![Ausgabe im Terminal](./img/Ausgabe_oldest.png)
 
+//TODO: Methode in Birth, damit Ausdrücke wie oldest.birth.day nicht nötig ist
