@@ -30,11 +30,11 @@ def sum_rec(n)
 Iterativ
 ```python
 def sum_iterativ(n)
-	int ret = 0;
-	while n > 0:
-		ret += n
-		n--
-	return ret;
+ int ret = 0;
+ while n > 0:
+	ret += n
+	n--
+ return ret;
 ```
 
 recursive
@@ -65,6 +65,12 @@ return 3 + sum_rec(2)
 - Navigieren von Baumstruckturen
 - Backtracking algoritmen
 - Divide and Conquer algoritmen ( z.B Merge-Sort)
+
+
+
+
+
+
 
 
 ## Extra Info
