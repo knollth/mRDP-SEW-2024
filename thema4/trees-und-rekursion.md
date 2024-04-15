@@ -10,7 +10,7 @@ rekursive Prinzip.
 
 ### Erkläre warum ein Baum eigentlich eine rekursive Datenstruktur ist.
 
-Ein Baum teilt sich in Teilbäume auf diese sind selbst wieder Binärbäume. Das bedeutet ein Binärbaum besteht aus sich wiederholenden Strukturen. Diese widerholung macht sie rekursiv. 
+Ein Baum teilt sich in Teilbäume auf diese sind selbst wieder Binärbäume. Das bedeutet ein Binärbaum besteht aus sich wiederholenden Strukturen. Diese Wiederholung macht sie rekursiv. 
 
 ### Wie ist die Anzahl der Knoten eines Baumes zu ermitteln? Erkläre an diesem Beispiel das rekursive Prinzip.
 
@@ -32,10 +32,10 @@ Ist der Wert nicht '0' wird die Methode für die Kindknoten des aktuellen Knoten
 
 ### Was ist mit pre/in/post-Order gemeint und wie ist dies zu implementieren?
 ![](/img/Baum.png)
-Man kann die Ausgabe eines Baums auf 3 verschieden Arten implementieren:
+Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum durchlaufen kann. 
 
 - **pre-Order**
-=> Bei diesem Verfahren wird zuerst der Wurzel-Knoten, danach zuerst der linke Teilbaum dann der rechte Teilbaum ausgegeben. 
+=> Bei diesem Verfahren wird zuerst der Wurzel-Knoten, danach zuerst der linke Teilbaum dann der rechte Teilbaum besucht. 
 - Ausgabe: 10 8 5 9 15 13 17  
 ```C#
  public void print_preorder(Node root){
@@ -48,7 +48,7 @@ Man kann die Ausgabe eines Baums auf 3 verschieden Arten implementieren:
   }
 ```
 - **in-Order**
-=> Bei diesem Verfahren wird zuerst der linke Teilbaum, danach die Wurzel, dann der rechte Teilbaum ausgegeben. 
+=> Bei diesem Verfahren wird zuerst der linke Teilbaum, danach die Wurzel, dann der rechte Teilbaum besucht. 
 - Ausgabe: 10 8 5 9 15 13 17  
 ```C#
  public void print_inorder(Node root){
@@ -63,7 +63,7 @@ Man kann die Ausgabe eines Baums auf 3 verschieden Arten implementieren:
   }
 ```
 - **post-Order**
-=> Bei diesem Verfahren werden zuerst der linke und dann der rechte Teilbaum ausgegeben und anschließend die Wurzel. 
+=> Bei diesem Verfahren werden zuerst der linke und dann der rechte Teilbaum besucht und anschließend die Wurzel. 
 - Ausgabe: 10 8 5 9 15 13 17  
 ```C#
  public void print_postorder(Node root){
@@ -80,7 +80,7 @@ Man kann die Ausgabe eines Baums auf 3 verschieden Arten implementieren:
 ### Wie ist die Höhe eines Baumes zu ermitteln?
 
 - Die Höhe eines Baums ist der längste Weg von dem root-Knoten zu einem Blatt-Knoten.
-- Die Blatt-Knoten auf beiden Seiten werden durchlaufen und gezählt 
+- Die Knoten auf beiden Seiten werden durchlaufen und gezählt 
 ```C#
  public int height(Node r){
 
