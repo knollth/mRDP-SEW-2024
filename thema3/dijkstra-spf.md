@@ -167,5 +167,5 @@ Nun wenn man erstmal den startKnoten bei Initalisierung mit 0 (Distanz von sich 
      das ist die Distanz vom start Vertex zu `current` + das Weight also die Distanz von current zu dem Neighbor den man sich gerade anschaut. Diese Information holt man sich aus der edge
     4. Wenn nun neue Distanz kleiner als die alte ist (wenn der Pfad noch nicht gefunden wurde ist die alte Distanz immer unendlich also die neue auch einfach kleiner) wird:
         1. distances von momentanigen neighbor auf die neue Distanz gesetzt
-        2 der neighbor in die Priroty queue mit der neuen Distanz hinzugefügt
+        2. der neighbor in die Priroty queue mit der neuen Distanz hinzugefügt
 
