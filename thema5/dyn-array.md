@@ -94,7 +94,8 @@ nur der nächste Zeiger muss verändert werden
 Element muss möglicherweise umkopiert werden
 
 *verkettete Liste:* 
-nur der nächste Zeiger muss verändert werden
+nur der nächste Zeiger muss verändert werden oder
+bis zum letzten Element durchlaufen, um den Zeiger zu verändern
 
 ---
 

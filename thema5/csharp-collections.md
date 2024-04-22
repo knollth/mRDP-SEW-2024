@@ -10,21 +10,18 @@ Performances:
 
 ### List
 
-Eine Liste ist eine dynamische Datenstrukter in welcher Elemente vom selben Typ gespeichert werden können. Auf diese Elemente kann mithilfe eines Index zuggegriffen werden. Dynamsiche bedeutet das sie bei bedarf verkleinert oder vergrößert weren könne. Die Reihenfolge der Werte kann x-beliebig sein (sortiert od. unsortiert). Die Maximale größer einer Liste sind 2^64 Elemente.
-Für die interne implementierung wird in der Regel ein dynamisches Array verwendet um die Elemente zu speichern.
+Eine Liste ist eine dynamische Datenstrukter in welcher Elemente vom selben Typ gespeichert werden können. Auf diese Elemente kann mithilfe eines Index zuggegriffen werden. Dynamisch bedeutet das sie bei bedarf verkleinert oder vergrößert werden könne. Die Reihenfolge der Werte kann x-beliebig sein (sortiert od. unsortiert). Die Maximale größer einer Liste sind 2^64 Elemente.
+Für die interne Implementierung wird in der Regel ein dynamisches Array verwendet um die Elemente zu speichern.
 
-Performance Eigenschaften für den Zugriff auf Elemente 
-- O(n) => wenn auf Element mit zufälligem Index zugegriffen wird, 
-- O(1) => wenn Elemente am Anfang oder am Ende sind  
-- O(log n) => für binäre suche in sortierter Liste 
- 
-Performance Eigenschaften für das Entfernen oder das Einfügen von Elementen
-- O(1) => wenn Elmente am Ende oder am Anfang einer Liste hinzugefügt oder entfernt werden 
-- O(n) => wenn Elemente an einer beliebigen stelle eingefügt oder von einer bleibeigen Stelle entfernt werden
+Löschen und Einfügen am Anfang:
+- O(n)
 
-Performance Eigenschaften für das Suchen von Elementen
+Löschen und Einfügen am Ende:
+- O(1)
+
+Performance Eigenschaften für das Suchen von Elementen.
 - O(n) => bei linearer Suche 
-- O(log n) => für binäre Such in eienr sortierten Liste 
+- O(log n) => für binäre Such in einer sortierten Liste 
 
 
 
@@ -57,13 +54,13 @@ class Program {
 ```
 ### Dictionary
 
-Dictionaries sind dynamischen Datenstrukturen, welche verwendet werden um Key-Value-Paare zu speicher. Die Elemente in einem Dictionary sind ungeordnet (keine festgeleget Reihenfolge). Auf die Werte werden mithilfe des Schlüssels zugegriffen. 
+Dictionaries sind dynamische Datenstrukturen, welche verwendet werden um Key-Value-Paare zu speicher. Die Elemente in einem Dictionary sind ungeordnet (keine festgeleget Reihenfolge). Auf die Werte werden mithilfe des Schlüssels zugegriffen. 
 - Key => wird zum identifizeiren des Wertes verwendet, eindeutig 
-- Value => Daren die mit dem Key verbunden sind 
+- Value => Daten die mit dem Key verbunden sind 
 
 Dictionaries verwenden intern Hashtabellen um die Key-Value-Paare zu speichern.
 
-Hashtabellen => Hashtabellen speichern Key-Value-Paare. Die Schlüssel werden mithilfe der Hashfunktion umgewandelt. Der Schlüssel wird zum Index, dies ermöglicht eineen schnellen Zugriff auf die Werte. 
+Hashtabellen => Hashtabellen speichern Key-Value-Paare. Die Schlüssel werden mithilfe der Hashfunktion umgewandelt. Der Schlüssel wird zum Index, dies ermöglicht einen schnellen Zugriff auf die Werte. 
 
 Performance Eigenschaften für das Zugreifen, das Suchen, das Entfernen oder das Einfügen eines Elements
 - O(1) 
@@ -98,8 +95,7 @@ class Program {
       }
   }
 }
-```
-Der Integer Datentyp repräsentiert den Schlüssel, der String den Wert. 
+``` 
 
 
 ### Set
@@ -111,9 +107,9 @@ In C# wird dafür 'HashSet' verwendet. Besonders praktisch ist es beispielsweise
 Intern wird Hashset entweder mit einer Hashtabelle oder einem Baum implementiert. Bei kleineren Datenmnegen wird eine Hashtabelle verwendet bei größeren eher Bäume.
 
 Performance Eigenschaften für das Zugreifen, Suchen, das Entfernen oder das Einfügen eines Elements
-- O(1) 
+- O(log n) 
   
-in Extremfällen => O(n)
+
 
 Implementiert wird HashSet folgend:
 ```C#
