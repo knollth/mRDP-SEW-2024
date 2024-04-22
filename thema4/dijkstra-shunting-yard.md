@@ -51,7 +51,54 @@ Kurz Infix Notation in Postfix um wandeln
 
 
 
+```python
+def shunting_yard(expression):
+    # Präzedenz und Assoziativität der Operatoren
+    precedence = {'+': 1, '-': 1, '*': 2, '/': 2}
+    left_associative = {'+': True, '-': True, '*': True, '/': True}
 
+    output_queue = []
+    operator_stack = []
+
+    # Hilfsfunktion, um zu prüfen, ob ein Zeichen ein Operator ist
+    def is_operator(c):
+        return c in precedence
+
+    # Hilfsfunktion, um zu prüfen, ob ein Zeichen eine Zahl oder Variable ist
+    def is_operand(c):
+        return c.isalnum()
+
+    index = 0
+    while index < len(expression):
+        token = expression[index]
+
+        if is_operand(token):  # Operanden direkt in die Ausgabequeue
+            output_queue.append(token)
+        elif is_operator(token):  # Operator verarbeiten
+            while (operator_stack and is_operator(operator_stack[-1]) and
+                   (precedence[operator_stack[-1]] > precedence[token] or
+                    (precedence[operator_stack[-1]] == precedence[token] and left_associative[token]))):
+                output_queue.append(operator_stack.pop())
+            operator_stack.append(token)
+        elif token == '(':  # Öffnende Klammer auf den Stack
+            operator_stack.append(token)
+        elif token == ')':  # Schließende Klammer verarbeitet alle Operatoren bis zur öffnenden Klammer
+            while operator_stack and operator_stack[-1] != '(':
+                output_queue.append(operator_stack.pop())
+            operator_stack.pop()  # Öffnende Klammer entfernen
+
+        index += 1
+
+    # Alle verbleibenden Operatoren in die Ausgabe verschieben
+    while operator_stack:
+        output_queue.append(operator_stack.pop())
+
+    return " ".join(output_queue)
+
+# Beispiel
+expression = "3 + 4 * 2 / ( 1 - 5 )"
+print(shunting_yard(expression))
+```
 
 
 
