@@ -64,7 +64,7 @@ Eine Hastabelle wäre besser für solche Vorgänge geeignet. Mit Hastabellen kö
 
 Daher wäre das Verwenden von einem Dictionary oder einem HashSet besser. 
 
-Dictionaries haben eine konstante Zeitkomplexität (O(1)) für das Suchen und Einfügen von Elementen. Das bedeutete, dass die Zeit die für das Suchen oder das Einfügen konstant bleibt. Die Dauer hängt nicht von der Menge der Daten ab. 
+Dictionaries haben eine konstante Zeitkomplexität (O(1)) für das Suchen und Einfügen von Elementen. Das bedeutete, dass die Zeit für das Suchen oder das Einfügen konstant bleibt. Die Dauer hängt nicht von der Menge der Daten ab. 
 
 Listen dagegen haben eine lineare zeitkomplexität (O(n)), bedeutete je länger die Liste ist (je größer die Datenmengen) desto mehr Zeit wird benötigt. 
 
@@ -87,8 +87,8 @@ class Program {
   }
 
   static string commonWord(string[] words){
-    Dictionary<string, int> wordCounts = new Dictionary<string, int>();
 
+    Dictionary<string, int> wordCounts = new Dictionary<string, int>();
 
     foreach (string word in words) {
         if (wordCounts.ContainsKey(word)) {
