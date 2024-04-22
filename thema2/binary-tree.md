@@ -272,3 +272,17 @@ Beim Löschen mit 2 Nachfolgern sucht man den kleinsten Knoten der rechten Seite
 
 - Mittler Aufwand ist O(log2 n): Der Baum relativ ausbalanciert. Dann findet man den Knoten im Schnitt bei O(log2 n)
 
+
+
+#### Fragen
+
+
+Kann man Rekursiv optimieren
+
+~~Binäre Bäume Lauzeit komplexität~~
+
+Zeichnen
+
+Schwierigster fall
+
+Sonderfall
