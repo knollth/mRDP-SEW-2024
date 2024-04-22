@@ -164,13 +164,14 @@ public void Delete(int k){
     // n hat keinen Nachfolger einfach vom Parent trennen
     if(n.left == null && n.right == null){
       if(parent == null){ // root Sonderfall
-        Console.WriteLine("Der letzte exestierende Konten kann nicht gelöscht werden"); 
+        root = null; 
         return;
-      }
-      if(parent.left == n){
-        parent.left = null;
       }else{
-        parent.right = null;
+        if(parent.left == n){
+          parent.left = null;
+        }else{
+          parent.right = null;
+        }
       }
     }
 
@@ -178,11 +179,12 @@ public void Delete(int k){
     if(n.left != null && n.right == null){
       if(parent == null){ // root Snoderfall
         root = n.left;
-      }
-      if(parent.left == n){
-        parent.left = n.left;
       }else{
-        parent.right = n.left;
+        if(parent.left == n){
+          parent.left = n.left;
+        }else{
+          parent.right = n.left;
+        }
       }
     }
 
@@ -190,11 +192,12 @@ public void Delete(int k){
     if(n.left == null && n.right != null){
       if(parent == null){ //root Sonderfall
         root = n.right;
-      }
-      if(parent.left == n){
-        parent.left = n.right;
       }else{
-        parent.right = n.right;
+        if(parent.left == n){
+          parent.left = n.right;
+        }else{
+          parent.right = n.right;
+        }
       }
     }
 
@@ -213,18 +216,19 @@ public void Delete(int k){
       root = smallestright;
       smallestright.left = n.left;
       smallestright.right = n.right;
-    }
+    }else{
 
-    if(parent.left == n){
-      parent.left = smallestright;
-      smallestright.left = n.left;
-      smallestright.right = n.right;
-    }
+      if(parent.left == n){
+        parent.left = smallestright;
+        smallestright.left = n.left;
+        smallestright.right = n.right;
+      }
 
-    if(parent.right == n){
-      parent.right = smallestright;
-      smallestright.left = n.left;
-      smallestright.right = n.right;
+      if(parent.right == n){
+        parent.right = smallestright;
+        smallestright.left = n.left;
+        smallestright.right = n.right;
+      }
     }
   }
 
