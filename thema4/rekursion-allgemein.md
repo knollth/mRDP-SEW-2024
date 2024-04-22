@@ -18,7 +18,7 @@ Das ganze wird Dreieckszahl gennant da die punkte jeder zahl ein Dreieck ergenbe
 ```
 
 
-Recursive
+Recursiv
 
 ```python
 def sum_rec(n)
@@ -27,25 +27,26 @@ def sum_rec(n)
  else:
   return n+sum_rec(n-1)
 ```
-Iterative
+Iterativ
 ```python
 def sum_iterativ(n)
-int ret = 0;
- for n >= 0:
-  ret += n
-  n--
-return ret;
+ int ret = 0;
+ while n > 0:
+	ret += n
+	n--
+ return ret;
 ```
 
 recursive
 sum_rec(3)
 
-
+```
 return 3 + sum_rec(2)
 		2 + sum_rec(1)
 			1 + sum_rec(0)
 				0
 	6
+```
 
 - **Laufzeit**:
     - Rekursive Implementierung: Die Laufzeit der rekursiven Implementierung ist O(n) da für jedes n eine neue Funktion aufgerufen werden muss
@@ -67,6 +68,12 @@ return 3 + sum_rec(2)
 - Divide and Conquer algoritmen ( z.B Merge-Sort)
 
 
+
+
+
+
+
+
 ## Extra Info
 ###  Bewertung der Laufzeit und des Speicherverbrauchs
 
@@ -83,3 +90,14 @@ Rekursionen sind mächtig, wenn es um die Lösung von Problemen geht, die natür
 
 Diese Konzepte sind fundamental, um sowohl die praktische Anwendung von mathematischen Modellen und Algorithmen als auch die theoretischen Grundlagen der Informatik zu verstehen.
 
+### Fragen Matejka
+
+Was ist der Stack?
+F: Was wird in diesem Zusammenhang im Stack gespeichtert?
+A: Speicheraddresse und n
+
+F: Warum kann es zum Stack Overflow kommen?
+A: 16MB und kann nicht wachsen
+
+F: Kann man mit einem Alg rekursiv in iterativ umwandeln?
+A: NEIN
