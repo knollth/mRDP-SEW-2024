@@ -164,7 +164,7 @@ public void Delete(int k){
     // n hat keinen Nachfolger einfach vom Parent trennen
     if(n.left == null && n.right == null){
       if(parent == null){ // root Sonderfall
-        Console.WriteLine("Der letzte exestierende Konten kann nicht gelöscht werden"); 
+        root = null; 
         return;
       }else{
         if(parent.left == n){
