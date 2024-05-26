@@ -10,7 +10,7 @@ rekursive Prinzip.
 
 ### Erkläre warum ein Baum eigentlich eine rekursive Datenstruktur ist.
 
-Ein Baum teilt sich in Teilbäume auf diese sind selbst wieder Binärbäume. Das bedeutet ein Binärbaum besteht aus sich wiederholenden Strukturen. Diese Wiederholung macht sie rekursiv. 
+Ein Baum teilt sich in Teilbäume auf diese sind selbst wieder Teilbäume. Das bedeutet ein Baum besteht aus sich wiederholenden Strukturen. Diese Wiederholung macht sie rekursiv. 
 
 ### Wie ist die Anzahl der Knoten eines Baumes zu ermitteln? Erkläre an diesem Beispiel das rekursive Prinzip.
 
@@ -98,4 +98,4 @@ Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum d
     }
   }
 ```
-Die Knoten werden durchlaufen und die Funktion rekursiv mit dem jeweiligen Paramter aufgerufen. Der return Wert ist die Läng der jeweiligen Seite. 
+Die Knoten werden durchlaufen, und die Funktion wird rekursiv für die linken und rechten Kinder jedes Knotens aufgerufen. Nach der Berechnung der Höhen der Teilbäume werden die Werte verglichen. Der größere Wert bestimmt die Höhe des Baums. Zusätzlich wird noch der aktuelle Knoten zu der Höhe addiert.

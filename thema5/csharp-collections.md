@@ -10,18 +10,15 @@ Performances:
 
 ### List
 
-Eine Liste ist eine dynamische Datenstrukter in welcher Elemente vom selben Typ gespeichert werden können. Auf diese Elemente kann mithilfe eines Index zuggegriffen werden. Dynamisch bedeutet das sie bei bedarf verkleinert oder vergrößert werden könne. Die Reihenfolge der Werte kann x-beliebig sein (sortiert od. unsortiert). Die Maximale größer einer Liste sind 2^64 Elemente.
+Eine Liste ist eine dynamische Datenstrukter in welcher Elemente vom selben Typ gespeichert werden können. Auf diese Elemente kann mithilfe eines Index zuggegriffen werden. Dynamisch bedeutet das sie bei bedarf verkleinert oder vergrößert werden könne. Die Reihenfolge der Werte kann x-beliebig sein (sortiert od. unsortiert). 
 Für die interne Implementierung wird in der Regel ein dynamisches Array verwendet um die Elemente zu speichern.
 
-Löschen und Einfügen am Anfang:
+Performance Eigenschaften einer Liste:
 - O(n)
 
-Löschen und Einfügen am Ende:
-- O(1)
+=> ist die Liste sortiert => O(log n)
 
-Performance Eigenschaften für das Suchen von Elementen.
-- O(n) => bei linearer Suche 
-- O(log n) => für binäre Such in einer sortierten Liste 
+=> mit Index => O(1)
 
 
 
@@ -62,6 +59,8 @@ Dictionaries verwenden intern Hashtabellen um die Key-Value-Paare zu speichern.
 
 Hashtabellen => Hashtabellen speichern Key-Value-Paare. Die Schlüssel werden mithilfe der Hashfunktion umgewandelt. Der Schlüssel wird zum Index, dies ermöglicht einen schnellen Zugriff auf die Werte. 
 
+Kollisionene treten auf wenn zwei verschieden Schlüssel denselbene Hashcode erzeugen und  demselben Bucket zugewiesen werden. behandeltw erden solche Kollisionen durch Verkettung. Beinhaltete ein Bucket beriets einen Wert, werden die neuen Einträge in einer verketteten Liste im gleihcen Bucket gespeichert.
+
 Performance Eigenschaften für das Zugreifen, das Suchen, das Entfernen oder das Einfügen eines Elements
 - O(1) 
 
@@ -100,14 +99,14 @@ class Program {
 
 ### Set
 
-Set ist eine ungeordnete Datenstruktur in der jeder Wert nur einmal vorkommen kann (Werte sind eindeutig). Die Elemente sind ungeordnet. 
+SET ist eine ungeordnete Datenstruktur in welcher jedes Element einzigartigt und eindeutig ist.
 
-In C# wird dafür 'HashSet' verwendet. Besonders praktisch ist es beispielsweise beim suchen von Elementen.
+C# bietet dafür die Klasse HashSet. Implementiert wird HashSet mit Hashtabellen. Ein HashSet wird verwendet, wenn keine doppelten Werte erlaubt sind und die Elemente keine bestimmte Reihenfolge haben müssen.
 
-Intern wird Hashset entweder mit einer Hashtabelle oder einem Baum implementiert. Bei kleineren Datenmnegen wird eine Hashtabelle verwendet bei größeren eher Bäume.
+Da die interne implemnetierung ebenfalls eine Hashtable ist, wird mit Kollisionen ähnlich umgegangen. Befindet sich bereits ein Element in einem Bucket, wird das neue Element der verketteten Liste dieses Buckets hinzugefügt.
 
 Performance Eigenschaften für das Zugreifen, Suchen, das Entfernen oder das Einfügen eines Elements
-- O(log n) 
+- O(1) 
   
 
 
@@ -138,12 +137,3 @@ foreach (string element in meinHashSet)
 }
 ```
 
-# List, Dictionary und Set im Vergleich 
-
-Listen sind sehr ähnlich zu normalen Arrays. Sie werden für einfache Zwecke wie aufzählen oder zufälliges Auswählen verwendet. Außerdem eignene sich Listen gut dafür Werte an beliebigen Stellen einzufügen oder zu entfernen.
-
-HashSet und Dictionaries sind für schnellere Vorgänge gedacht. 
-HashSet speichern eine Ansammlung von eindeutigen Elementen. Sie ordnene den Werten durch eine Hasfunktion einen Schlüssel zu. Dadurch könnene Duplikate identifiziert werden. 
-Dictionaries speichert Key-Value-Paare und ordnet den Wert einen eidneutigen Schlüssel zu. Ebenfalls wird eine Hashfunktion verwendet. Dictionaries eigenen sich dafür schnella uf Wert zuzugreifen. 
-
-Grundlegend sind Dictionaries und HahSet ähnlich. Der Unterschied liegt an der Art wie die Werte gespeichert werden.
