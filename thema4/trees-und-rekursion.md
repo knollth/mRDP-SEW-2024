@@ -10,7 +10,7 @@ rekursive Prinzip.
 
 ### Erkläre warum ein Baum eigentlich eine rekursive Datenstruktur ist.
 
-Ein Baum teilt sich in Teilbäume auf diese sind selbst wieder Binärbäume. Das bedeutet ein Binärbaum besteht aus sich wiederholenden Strukturen. Diese Wiederholung macht sie rekursiv. 
+Ein Baum teilt sich in Teilbäume auf diese sind selbst wieder Teilbäume. Das bedeutet ein Baum besteht aus sich wiederholenden Strukturen. Diese Wiederholung macht sie rekursiv. 
 
 ### Wie ist die Anzahl der Knoten eines Baumes zu ermitteln? Erkläre an diesem Beispiel das rekursive Prinzip.
 
@@ -19,7 +19,7 @@ public int Count(){
     return CounterHelper(root);
   }
 
-  private int CounterHelper(Node r){
+private int CounterHelper(Node r){
 
     if(r == null){
       return 0;
@@ -31,7 +31,7 @@ Die Counterhelper() Methode durchläuft rekursiv den Baum und gibt die Gesamtzah
 Ist der Wert nicht '0' wird die Methode für die Kindknoten des aktuellen Knotens aufgerufen. Die Knotenanzahl der Teilbäume wird addiert. Es wird '1' addiert um den aktuellen Knoten mitzuzählen. 
 
 ### Was ist mit pre/in/post-Order gemeint und wie ist dies zu implementieren?
-![](/img/Baum.png)
+![](img/Baum.png)
 Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum durchlaufen kann. 
 
 - **pre-Order**
@@ -49,7 +49,7 @@ Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum d
 ```
 - **in-Order**
 => Bei diesem Verfahren wird zuerst der linke Teilbaum, danach die Wurzel, dann der rechte Teilbaum besucht. 
-- Ausgabe: 10 8 5 9 15 13 17  
+- Ausgabe: 5 8 9 10 13 15 17 
 ```C#
  public void print_inorder(Node root){
 
@@ -64,7 +64,7 @@ Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum d
 ```
 - **post-Order**
 => Bei diesem Verfahren werden zuerst der linke und dann der rechte Teilbaum besucht und anschließend die Wurzel. 
-- Ausgabe: 10 8 5 9 15 13 17  
+- Ausgabe: 5 9 8 13 17 15 10  
 ```C#
  public void print_postorder(Node root){
     if(root == null){
@@ -98,4 +98,4 @@ Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum d
     }
   }
 ```
-Die Knoten werden durchlaufen und die Funktion rekursiv mit dem jeweiligen Paramter aufgerufen. Der return Wert ist die Läng der jeweiligen Seite. 
+Die Knoten werden durchlaufen, und die Funktion wird rekursiv für die linken und rechten Kinder jedes Knotens aufgerufen. Nach der Berechnung der Höhen der Teilbäume werden die Werte verglichen. Der größere Wert bestimmt die Höhe des Baums. Zusätzlich wird noch der aktuelle Knoten zu der Höhe addiert.

@@ -72,7 +72,7 @@ sequenzieller Durchlauf notwendig
 | Stelle | Dynamisches Array | verkettete Liste | 
 |----------|----------|----------|
 | Anfang   | O(n)   | O(1)   |
-| Ende   | O(1)   | O(1)   |
+| Ende   | O(1)   | O(n)   |
 | Mitte   | O(n)   | O(n)   |
 
 *dynamisches Array:*
@@ -108,7 +108,7 @@ using System;
 class DynArray
 {
     public int[] array;
-    public int size; // Anzahl der Elemente im Array --> i
+    public int size; // Anzahl der Elemente im Array
 
 
     public DynArray()

@@ -163,3 +163,6 @@ public class Response
 
 //...
 ```
+---
+
+Fragen: Alternative zu JSON? --> XML

@@ -41,16 +41,17 @@ class Program {
     foreach(string word in WordList){
       int WordCount = 0;
 
-    foreach(string w in WordList){
-      if(w == word){
-        WordCount++;
+      foreach(string w in WordList){
+        if(w == word){
+          WordCount++;
+        }
       }
-    
-    }
+
       if(WordCount>MaxCount){
         MaxCount = WordCount;
         commonWord = word;
       }
+      
   }
 
     return commonWord;
@@ -60,15 +61,18 @@ class Program {
 ```
 
 ### Diskutiere Möglichkeiten um das Programm zu beschleunigen
-Eine Hastabelle wäre besser für solche Vorgänge geeignet. Mit Hastabellen können effizent Elemente gesucht und ihre Anzahl ermittelt werden.
+Eine Hashtabelle wäre besser für solche Vorgänge geeignet. Mit Hashtabellen können effizient Elemente gesucht und ihre Anzahl ermittelt werden.
 
 Daher wäre das Verwenden von einem Dictionary oder einem HashSet besser. 
 
 Dictionaries haben eine konstante Zeitkomplexität (O(1)) für das Suchen und Einfügen von Elementen. Das bedeutete, dass die Zeit für das Suchen oder das Einfügen konstant bleibt. Die Dauer hängt nicht von der Menge der Daten ab. 
 
-Listen dagegen haben eine lineare zeitkomplexität (O(n)), bedeutete je länger die Liste ist (je größer die Datenmengen) desto mehr Zeit wird benötigt. 
+Listen dagegen haben eine lineare zeitkomplexität (O(n)), bedeutete je länger die Liste ist (je größer die Datenmengen) desto mehr Zeit wird benötigt. In dem sich oben befindenden Beispiel befinden sich verschachtelte Schleifen, daher ist die genaue Laufzeit diese Programms O(n^2).
 
-Auch HashSet wäre schneller als eine Liste. Für das Ermitteln des Wortvorkommens ist es jedoch nicht geeignet. In einem HashSet werden nur eindeutige Werte gespeichert und keine Wiederholungen.
+Auch HashSet wäre schneller als eine Liste. Es ist eine Menge an Objekten, welche jedoch keine Duplikate erlaubt. Die Values des Hashsets sind gleich der Key. 
+
+Bei einem HashMap hat man ein Dictionary. Die  Objekte werden unter einem Bestimmten Key gespeichert daher ist es möglich Duplikate zu speichern. Die Keys sind einzigartige, ein Objekt kann aber unter verschiedenen Keys mehrfach vorkommen. 
+
 
 Implementierung mit Dictionary:
 
@@ -91,6 +95,7 @@ class Program {
     Dictionary<string, int> wordCounts = new Dictionary<string, int>();
 
     foreach (string word in words) {
+
         if (wordCounts.ContainsKey(word)) {
             wordCounts[word]++;
         } else {
@@ -113,3 +118,4 @@ class Program {
   }
 }
 ```
+Bei diesem Programm ist die Laufzeit O(n).

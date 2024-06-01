@@ -305,7 +305,7 @@ class Program
 ```
 
 &nbsp;
-**Ausgabe im Terminal:**
+**Ausgabe:**
 
 ![Ausgabe im Terminal](./img/Ausgabe_oldest.png)
 
