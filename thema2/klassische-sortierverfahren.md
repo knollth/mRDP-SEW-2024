@@ -83,3 +83,31 @@ Die Speicherkomplexität ist O(1), weil der Algorithmus im bereits vorhandenen A
 Es kann iterativ und rekursiv implementiert werden. Die Laufzeitkomplexität ändert sich nicht. Die Speicherkomplexität ist bei der rekursiven Variante jedoch O(n).
 
 ## Insertion Sort
+
+Insertion Sort sortiert eine Datenmenge indem sie von vorn bis hinten durchgegangen wird, die Elemente werden verglichen und bei bedarf wird ein Element entnommen und wird weiter vorn wieder eingesetzt.
+
+### Funktion
+
+Der Algorithmus geht die gesamte Menge an Elementen durch, das aktuelle Element wird mit den zuvorgehenden Elementen verglichen bis die passende Stelle gefunden ist. Das Element wird dann an dieser Stelle eingefügt. Es besteht auch die Möglichkeit, dass sich das Element bereits an der richtigen Stelle befindet. Das Erste Element in einer Menge kann übersprungen werden, da dieses keine Vorgänger hat mit denen es verglichen werden könnte.
+
+Beispiel: Die Menge [7,3,9,2,1,4]
+
+Durchlauf 1: Das zweite Element wird mit dem ersten verglichen und die beiden werden vertauscht da 3 kleiner ist als 7. (Array: 3,7,9,2,1,4)
+
+Durchlauf 2: 9 wird nun mit seinen Vorgängern verglichen. Hierbei wird nichts vertauscht da 7 kleiner ist als 9. (Array: 3,7,9,2,1,4)
+
+Durchlauf 3: 2 wird nun verglichen. 2 ist kleiner als 9 wird jedoch weiter mit seinen Vorgängern verglichen. Da die 2 kleiner als alle ihre Vorgänger ist, wird sie an der Stelle 0 eingefügt. (Array: 2,3,7,9,1,4)
+
+Durchlauf 4: 1 wird nun verglichen. 1 ist auch kleiner als alle seine Vorgänger und wird daher an der Stelle 0 eingefügt. (Array: 1,2,3,7,9,4)
+
+Durchlauf 5: 4 wird nun verglichen und ist auch das letzte unsortierte Element. 4 ist kleiner als 7 und größer als 3 und wird daher direkt nach der 3 eingefügt. (Array: 1,2,3,4,7,9)
+
+Die Menge ist nun aufsteigend sortiert. Diese Durchläufe wiederholen sich so oft, wie es Elemente in der Menge gibt.
+
+### Performance
+
+Insertion Sort verwendet zwei ineinander verschachtelte Schleifen (eine Durchläuft das gesamte Array und die Andere vergleicht das aktuelle Element mit seinen Vorgängern). Dadurch kann es passieren, dass die zweite Schleife bis zum Anfang der Menge zurücklaufen muss, sollte das aktuelle Element das bisher kleinste sein. Bei großen, unsortierten, Datenmengen kann das schnell ineffizient werden. Die Zeitkomplexität beträgt O(n<sup>2</sup>) da jede der beiden Schleifen eine Komlexität von O(n) hat.
+
+Die Speicherkomplexität ist O(1), da nur mit dem zu sortierenden Array gearbeitet wird.
+
+Der Algorithmus kann iterativ und rekursiv implementiert werden. Jedoch hat er bei der rekursiven Variante eine Speicherkomplexität von O(n).
