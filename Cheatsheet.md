@@ -1,4 +1,5 @@
 # Cheatsheet
+# C\#
 
 ### Reading Files
 ```c#
@@ -65,3 +66,17 @@ interface IPizza{
 Um Methode zu überscheiben müssen Sie das Keyord ```c# virtual``` beinhalten
 
 Zum überschreiben verwenden wir ```c# override``` 
+
+
+# Python
+
+## Array / Stack
+
+```python
+stack = []
+
+stack.append(1)
+stack.append(2)
+
+a = stack.pop() // a == 2 -> True
+```
