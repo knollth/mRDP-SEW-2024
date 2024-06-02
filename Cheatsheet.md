@@ -67,6 +67,12 @@ Um Methode zu überscheiben müssen Sie das Keyord ```c# virtual``` beinhalten
 
 Zum überschreiben verwenden wir ```c# override``` 
 
+### hashing
+Zu verwendende Library zum Löschen aus dem HashTable:
+
+```C#
+using System.Collections;
+```
 
 # Python
 
