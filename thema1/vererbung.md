@@ -9,7 +9,7 @@ Nehmen wir an, wir möchten ein Programm zur Modellierung von Fahrzeugen erstell
 ```csharp
 using System;
 
-// Basisklasse Fahrzeug
+//Basisklasse Fahrzeug
 class Fahrzeug
 {
     public int Geschwindigkeit { get; set; }
