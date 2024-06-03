@@ -72,3 +72,4 @@ Eine abstrakten Basisklasse `Mitarbeiter`, von der drei spezifische Klassen (`En
 Im Hauptprogramm  werden Instanzen dieser Klassen erstellt und die Methode `MitarbeiterArbeitstag()` wird aufgerufen, um die `Arbeiten()`-Methode für jede dieser Instanzen auszuführen. Dies zeigt, wie unterschiedlich die Implementierungen der Methode `Arbeiten()` sein können, obwohl sie von derselben abstrakten Methode in der Basisklasse abgeleitet sind. 
 
 
+ 
