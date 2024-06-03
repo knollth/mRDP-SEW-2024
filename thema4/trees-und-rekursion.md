@@ -82,20 +82,26 @@ Die Begriffe beziehen sich auf 3 verschieden Möglichkeiten wie man einen Baum d
 - Die Höhe eines Baums ist der längste Weg von dem root-Knoten zu einem Blatt-Knoten.
 - Die Knoten auf beiden Seiten werden durchlaufen und gezählt 
 ```C#
- public int height(Node r){
+  public int height(){
+    return HeightHelper(root);
+  }
+  public int HeightHelper(Node r){
 
     if(r == null){
       return 0;
     }
 
-    int leftHeight = height(r.left);
-    int rightHeight = height(r.right);
-    
+    int leftHeight = HeightHelper(r.left);
+    int rightHeight = HeightHelper(r.right);
     if(leftHeight>rightHeight){
       return leftHeight+1;
     }else{
       return rightHeight+1;
+
     }
+
   }
 ```
 Die Knoten werden durchlaufen, und die Funktion wird rekursiv für die linken und rechten Kinder jedes Knotens aufgerufen. Nach der Berechnung der Höhen der Teilbäume werden die Werte verglichen. Der größere Wert bestimmt die Höhe des Baums. Zusätzlich wird noch der aktuelle Knoten zu der Höhe addiert.
+
+Auch hier wird eine Helpermethode verwende da der root-Knoten nicht bekannt ist.
