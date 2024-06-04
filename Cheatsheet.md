@@ -29,6 +29,30 @@ int[] a;
 a.Length // not length()
 ```
 
+### List
+```cs
+List<string> list = new List<string>();
+list.Add("string");
+list.Remove("string");
+int length = list.Count;
+```
+
+### Dictionary
+```cs
+Dictionary<string, string> dict = new Dictionary<string, string>();
+dict.Add("key", "value");
+dict.Remove("key");
+int lenght = list.Count;
+```
+
+### Set
+```cs
+HashSet<string> hset  = new HashSet<string>();
+hset.Add("string");
+hset.Remove("string");
+int lenght = hset.Count;
+```
+
 ### Json Format
 ```c#
 string dataJson = File.ReadAllText(""geolacation.json);
@@ -62,6 +86,15 @@ interface IPizza{
 }
 ```
 
+### Foreach
+```cs
+foreach (Person x in y){}
+```
+
+### Split
+```cs
+string[] parts = text.Split(';');
+```
 ### Vererbung / Polymorphismus
 Um Methode zu überscheiben müssen Sie das Keyord ```c# virtual``` beinhalten
 

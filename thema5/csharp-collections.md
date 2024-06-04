@@ -59,9 +59,10 @@ Dictionaries verwenden intern Hashtabellen um die Key-Value-Paare zu speichern.
 
 Hashtabellen => Hashtabellen speichern Key-Value-Paare. Die Schlüssel werden mithilfe der Hashfunktion umgewandelt. Der Schlüssel wird zum Index, dies ermöglicht einen schnellen Zugriff auf die Werte. 
 
-Kollisionene treten auf wenn zwei verschieden Schlüssel denselbene Hashcode erzeugen und  demselben Bucket zugewiesen werden. behandeltw erden solche Kollisionen durch Verkettung. Beinhaltete ein Bucket beriets einen Wert, werden die neuen Einträge in einer verketteten Liste im gleihcen Bucket gespeichert.
+Kollisionene treten auf wenn zwei verschieden Schlüssel denselbene Hashcode erzeugen und  demselben Bucket zugewiesen werden. behandeltw erden solche Kollisionen durch Verkettung. Beinhaltete ein Bucket beriets einen Wert, werden die neuen Einträge in einer verketteten Liste im gleichen Bucket gespeichert.
 
 Performance Eigenschaften für das Zugreifen, das Suchen, das Entfernen oder das Einfügen eines Elements
+Aus Hashtabellen wird meist nicht gelöscht.
 - O(1) 
 
   
