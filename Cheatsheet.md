@@ -107,6 +107,11 @@ Zu verwendende Library zum Löschen aus dem HashTable:
 using System.Collections;
 ```
 
+Löschen aus dem HashTable:
+```C#
+hashtablename.Remove("NAME");
+```
+
 ### Stack
 
 ```c#
