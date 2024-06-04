@@ -100,6 +100,12 @@ Um Methode zu überscheiben müssen Sie das Keyord ```c# virtual``` beinhalten
 
 Zum überschreiben verwenden wir ```c# override``` 
 
+### hashing
+Zu verwendende Library zum Löschen aus dem HashTable:
+
+```C#
+using System.Collections;
+```
 
 # Python
 
@@ -113,3 +119,31 @@ stack.append(2)
 
 a = stack.pop() // a == 2 -> True
 ```
+
+## List
+
+Implementierung
+
+```csharp
+    List<string> names = new List<string>();
+```
+
+## Dictionary
+
+Implementierung
+
+```csharp
+   Dictionary<string, string> village = new Dictionary<string, string>();
+```
+
+
+## Set 
+
+### HashSet 
+
+Implementierung
+
+```csharp
+   HashSet<string> city  = new HashSet<string>();
+```
+

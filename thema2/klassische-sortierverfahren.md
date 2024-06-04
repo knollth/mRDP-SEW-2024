@@ -39,6 +39,26 @@ Hier ist das Array nun fertig sortiert. Es wird nun ein dritter Durchlauf durchg
 
 Das Array wird solange durchlaufen, bis es sortiert ist (wird daran erkannt, dass bei einem Durchlauf nichts getauscht wird)
 
+Implementierung als Programmcode:
+
+```C#
+int[] array = { 108, 23, 69, 420, 9 };
+int temporary;
+
+for (int j = 0; j < array.Length - 1; j++)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        if (array[i] > array[i + 1])
+        {
+            temporary= array[i + 1];
+            array[i + 1] = array[i];
+            array[i] = temporary;
+        }
+    }
+}
+```
+
 ### Performance
 
 Best-Case: Das Array ist bereits sortiert und es muss nur ein einziger Durchlauf gemacht und nichts vertauscht werden muss. Laufzeitkomplexität: O(n)
