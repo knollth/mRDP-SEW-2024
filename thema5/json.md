@@ -6,40 +6,40 @@ Über den Google geocode Webservice soll ermittelt werden in welchem Land sich 
 
 ```
 {
-   "results" : [
-      {
-         "address_components" : [
-            {
-               "long_name" : "Toronto",
-               "short_name" : "Toronto",
-               "types" : [ "locality", "political" ]
-            },
-            {
-               "long_name" : "Toronto Division",
-               "short_name" : "Toronto Division",
-               "types" : [ "administrative_area_level_2", "political" ]
-            },
-            {
-               "long_name" : "Ontario",
-               "short_name" : "ON",
-               "types" : [ "administrative_area_level_1", "political" ]
-            },
-            {
-               "long_name" : "Canada",
-               "short_name" : "CA",
-               "types" : [ "country", "political" ]
-            }
-         ],
-         "formatted_address" : "Toronto, ON, Canada",
-         "geometry" : {
-            "location" : {
-               "lat" : 46.452469,
-               "lng" : -63.379967
-            },
-         }
-      }
-   ],
-   "status" : "OK"
+	 "results" : [
+			{
+				 "address_components" : [
+						{
+							 "long_name" : "Toronto",
+							 "short_name" : "Toronto",
+							 "types" : [ "locality", "political" ]
+						},
+						{
+							 "long_name" : "Toronto Division",
+							 "short_name" : "Toronto Division",
+							 "types" : [ "administrative_area_level_2", "political" ]
+						},
+						{
+							 "long_name" : "Ontario",
+							 "short_name" : "ON",
+							 "types" : [ "administrative_area_level_1", "political" ]
+						},
+						{
+							 "long_name" : "Canada",
+							 "short_name" : "CA",
+							 "types" : [ "country", "political" ]
+						}
+				 ],
+				 "formatted_address" : "Toronto, ON, Canada",
+				 "geometry" : {
+						"location" : {
+							 "lat" : 46.452469,
+							 "lng" : -63.379967
+						}
+				 }
+			}
+	 ],
+	 "status" : "OK"
 }
 ```
 ---
@@ -114,6 +114,13 @@ class Program
                   country = addressComponent.long_name;
             }
          }
+
+            /*
+            // 2. Möglichkeit
+				string[] splitAddress = result.formatted_address.Split(',');
+				city = splitAddress[0];
+				country = splitAddress[splitAddress.Length - 1];
+            */
       }
 
       Console.WriteLine("Country: "+country+"\nCity:"+city);
