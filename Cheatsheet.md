@@ -119,3 +119,13 @@ stack.append(2)
 
 a = stack.pop() // a == 2 -> True
 ```
+
+# C# Stack
+
+```c#
+Stack<char> stack= new Stack<char>();
+
+stack.Peek();
+stack.Push(' ');
+stack.Pop();
+```
