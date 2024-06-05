@@ -55,7 +55,7 @@ int lenght = hset.Count;
 
 ### Json Format
 ```c#
-string dataJson = File.ReadAllText(""geolacation.json);
+string dataJson = File.ReadAllText("geolacation.json");
 Type response = JsonSerializer.Deserialize<Type>(string)
 ```
 
