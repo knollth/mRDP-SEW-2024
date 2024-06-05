@@ -168,4 +168,6 @@ Nun wenn man erstmal den startKnoten bei Initalisierung mit 0 (Distanz von sich 
     4. Wenn nun neue Distanz kleiner als die alte ist (wenn der Pfad noch nicht gefunden wurde ist die alte Distanz immer unendlich also die neue auch einfach kleiner) wird:
         1. distances von momentanigen neighbor auf die neue Distanz gesetzt
         2. der neighbor in die Priroty queue mit der neuen Distanz hinzugefügt
+      
+** Fuer einen undirected Graph beim dijkstra muss man auch noch zum distances[neighbor] die eine map machen die previous[neighbor] hat. Danach kann man einen pfad zusammenbauen vom der endNote zur startNode **
 
